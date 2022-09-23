@@ -1,0 +1,187 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <meta http-equiv="Content-Style-Type" content="text/css">
+  <title></title>
+  <meta name="Generator" content="Cocoa HTML Writer">
+  <meta name="CocoaVersion" content="2113.5">
+  <style type="text/css">
+  </style>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+  <style>
+  body {
+  background-image: url("https://images.rawpixel.com/image_1300/cHJpdmF0ZS9sci9pbWFnZXMvd2Vic2l0ZS8yMDIyLTA1L3Y4ODItc2FzaS01My5qcGc.jpg");
+  background-position: top;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-color: #000000;
+  }
+  a:link {
+  color: #0096FF;
+  background-color: transparent;
+  text-decoration: none;
+}
+
+a:visited {
+  color: #0096FF;
+  background-color: transparent;
+  text-decoration: none;
+}
+
+a:hover {
+  color: #0000FF;
+  background-color: transparent;
+  text-decoration: underline;
+}
+
+a:active {
+  color: white;
+  background-color: transparent;
+  text-decoration: underline;
+}
+
+.dropdowns{
+  font-size: 20px;
+}
+
+#recnum,#lang{
+font-size: 20px;
+}
+
+.get_top_records {
+  background-color: #ffe0ad;
+  border: solid;
+  border-width: 2px;
+  border-color: #ffe0ad;
+  color: black;
+  padding: 12px 25px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  border-radius: 25px;
+}
+.get_top_records:hover {
+  background-color: black;
+  border-width: 2px;
+  border: solid;
+  border-color: #ffe0ad;
+  color: #ffe0ad;
+}
+
+.btnhome {
+  position: absolute;
+  bottom: 1;
+  margin-left: -70px;
+  background-color: black;
+  border-width: 2px;
+  border: solid;
+  border-color: #ffe0ad;
+  color: #ffe0ad;
+  padding: 6px 10px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  border-radius: 25px;
+}
+.btnhome:hover {
+  background-color: #ffe0ad;
+  border: solid;
+  border-width: 2px;
+  border-color: #ffe0ad;
+  color: black;
+}
+.tooltip {
+  position: absolute !important;
+  display: inline !important;
+  /*border-bottom: 1px dotted white;*/
+}
+
+.tooltip .tooltiptext {
+  visibility: hidden;
+  width: 120px;
+  background-color: black;
+  color: #fff;
+  text-align: center;
+  border-radius: 6px;
+  padding: 5px 0;
+
+  /* Position the tooltip */
+  position: absolute;
+  z-index: 1;
+  }
+.tooltip:hover .tooltiptext {
+  visibility: visible;
+}
+
+</style>
+<body text="#FFFFFF";>
+<br>
+<br>
+<br>
+<form action="response" method="POST">
+{% csrf_token %}
+<center>
+  <div class="container">
+    <h1 style="font-size: 35px">GNews!</h1>
+    <h2>Top News Articles</h2>
+    <h3>Please provide the following data.</h3>
+    <hr>
+
+    <label for="recnum" style="font-size:20px"><b>Records:&nbsp;&nbsp;</b></label>
+    <input min="1" max="20" type="number" placeholder="Enter no. of records" name="recnum" style="width:250px;margin-left:13px" id="recnum" required>
+
+    <div class="tooltip">&nbsp;&nbsp;<i style="font-size:26px" class="fa">&#xf059;</i>
+       <span class="tooltiptext">Number of Records 1-20</span>
+    </div><br><br>
+
+    <label for="lang" style="font-size:20px"><b>Language Code:&nbsp;&nbsp;</b></label>
+    <select name="lang" id="lang" style="padding:6px;font-size:15px;width:196px;margin-left:13px">
+	
+		<option value="en" style="font-size:15px">en</option>
+		<option value="ar" style="font-size:15px">ar</option>
+		<option value="de" style="font-size:15px">de</option>
+		<option value="el" style="font-size:15px">el</option>
+		<option value="es" style="font-size:15px">es</option>
+		<option value="fr" style="font-size:15px">fr</option>
+		<option value="he" style="font-size:15px">he</option>
+		<option value="hi" style="font-size:15px">hi</option>
+		<option value="it" style="font-size:15px">it</option>
+		<option value="ja" style="font-size:15px">ja</option>
+		<option value="ml" style="font-size:15px">ml</option>
+		<option value="mr" style="font-size:15px">mr</option>
+		<option value="nl" style="font-size:15px">nl</option>
+		<option value="no" style="font-size:15px">no</option>
+		<option value="pt" style="font-size:15px">pt</option>
+		<option value="ro" style="font-size:15px">ro</option>
+		<option value="ru" style="font-size:15px">ru</option>
+		<option value="sv" style="font-size:15px">sv</option>
+		<option value="ta" style="font-size:15px">ta</option>
+		<option value="te" style="font-size:15px">te</option>
+		<option value="uk" style="font-size:15px">uk</option>
+		<option value="zh" style="font-size:15px">zh</option>
+	</select>
+    <div class="tooltip">&nbsp;&nbsp;<i style="font-size:26px" class="fa">&#xf059;</i>
+       <span class="tooltiptext">Language code<br> Arabic : ar<br>German : de<br>Greek : el<br>English : en<br>Spanish : es<br>French : fr<br>Hebrew : he<br>Hindi : hi<br>Italian : it<br>Japanese : ja<br>Malayalam : ml<br>Marathi : mr<br>Dutch : nl<br>Norwegian : no<br>Portuguese : pt<br>Romanian : ro<br>Russian : ru<br>Swedish : sv<br>Tamil : ta<br>Telugu : te<br>Ukrainian : uk<br>Chinese : zh</span>
+      </div><br><br>
+
+    <hr>
+    <button style="font-size:20px" type="submit" class="get_top_records">Get Records!</button>
+  </div>
+
+  <div class="container signin">
+  </div>
+</center>
+</form>
+  <div class="container signin">
+    <h3 style="text-align: center;"><a href="/"><button class="btnhome">Return to Home</button></a></h3>
+  </div>
+
+</body>
+</html>
+
+</body>
+</html>

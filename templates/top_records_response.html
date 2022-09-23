@@ -1,0 +1,150 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html lang="en">
+<head>
+  <meta http-equiv="Content-Type">
+  <meta http-equiv="Content-Style-Type" content="text/css">
+  <title></title>
+  <meta name="Generator" content="Cocoa HTML Writer">
+  <meta name="CocoaVersion" content="2113.5">
+  <style type="text/css">
+  </style>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+  <style>
+  body {
+  background-image: url("https://images.rawpixel.com/image_1300/cHJpdmF0ZS9sci9pbWFnZXMvd2Vic2l0ZS8yMDIyLTA1L3Y4ODItc2FzaS01My5qcGc.jpg");
+  background-position: top;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-color: #000000;
+  }
+  a:link {
+  color: #0096FF;
+  background-color: transparent;
+  text-decoration: none;
+}
+
+a:visited {
+  color: #0096FF;
+  background-color: transparent;
+  text-decoration: none;
+}
+
+a:hover {
+  color: #0000FF;
+  background-color: transparent;
+  text-decoration: underline;
+}
+
+a:active {
+  color: white;
+  background-color: transparent;
+  text-decoration: underline;
+}
+
+.dropdowns{
+  font-size: 20px;
+}
+
+#crt,#dpt,#tbl, #xd, #yd, #zd{
+font-size: 20px;
+}
+
+.get_top_records {
+  background-color: #ffe0ad;
+  border: solid;
+  border-width: 2px;
+  border-color: #ffe0ad;
+  color: black;
+  padding: 12px 25px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  border-radius: 25px;
+}
+.get_top_records:hover {
+  background-color: black;
+  border-width: 2px;
+  border: solid;
+  border-color: #ffe0ad;
+  color: #ffe0ad;
+}
+
+.btnhome {
+  position: absolute;
+  bottom: 1;
+  margin-left: -70px;
+  background-color: black;
+  border-width: 2px;
+  border: solid;
+  border-color: #ffe0ad;
+  color: #ffe0ad;
+  padding: 6px 10px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  border-radius: 25px;
+}
+.btnhome:hover {
+  background-color: #ffe0ad;
+  border: solid;
+  border-width: 2px;
+  border-color: #ffe0ad;
+  color: black;
+}
+.tooltip {
+  position: absolute !important;
+  display: inline !important;
+  /*border-bottom: 1px dotted white;*/
+}
+
+.tooltip .tooltiptext {
+  visibility: hidden;
+  width: 120px;
+  background-color: black;
+  color: #fff;
+  text-align: center;
+  border-radius: 6px;
+  padding: 5px 0;
+
+  /* Position the tooltip */
+  position: absolute;
+  z-index: 1;
+  }
+.tooltip:hover .tooltiptext {
+  visibility: visible;
+}
+
+</style>
+<body text="#FFFFFF";>
+<br>
+<br>
+<br>
+<form action="top_recordsr" method="POST">
+
+<center>
+  <div class="container">
+    <h1 style="font-size: 35px">GNews!</h1>
+    <h2>Top News Articles</h2>
+    <h3>Following are the top {{no_records}} news for provided language code '{{lang}}'.</h3>
+	<p style="color:Red;">{{max_issue}}</p>
+    <hr>
+	<p font-family: "Arial Unicode MS"> {{articles}} </p>
+    <hr>
+  </div>
+
+  <div class="container signin">
+  </div>
+</center>
+</form>
+  <div class="container signin">
+    <h3 style="text-align: center;"><a href="/"><button class="btnhome">Return to Home</button></a></h3>
+  </div>
+  
+</body>
+</html>
+
+</body>
+</html>

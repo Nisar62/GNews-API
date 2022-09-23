@@ -1,0 +1,154 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <meta http-equiv="Content-Style-Type" content="text/css">
+  <title></title>
+  <meta name="Generator" content="Cocoa HTML Writer">
+  <meta name="CocoaVersion" content="2113.5">
+  <style type="text/css">
+  </style>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+  <style>
+  body {
+  background-image: url("https://images.rawpixel.com/image_1300/cHJpdmF0ZS9sci9pbWFnZXMvd2Vic2l0ZS8yMDIyLTA1L3Y4ODItc2FzaS01My5qcGc.jpg");
+  background-position: top;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-color: #000000;
+  }
+  a:link {
+  color: #0096FF;
+  background-color: transparent;
+  text-decoration: none;
+}
+
+a:visited {
+  color: #0096FF;
+  background-color: transparent;
+  text-decoration: none;
+}
+
+a:hover {
+  color: #0000FF;
+  background-color: transparent;
+  text-decoration: underline;
+}
+
+a:active {
+  color: white;
+  background-color: transparent;
+  text-decoration: underline;
+}
+
+.dropdowns{
+  font-size: 20px;
+}
+
+#recnum,#lang,#keyw, #search_type{
+font-size: 20px;
+}
+
+.register {
+  background-color: #ffe0ad;
+  border: solid;
+  border-width: 2px;
+  border-color: #ffe0ad;
+  color: black;
+  padding: 12px 45px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  border-radius: 25px;
+}
+.register:hover {
+  background-color: black;
+  border-width: 2px;
+  border: solid;
+  border-color: #ffe0ad;
+  color: #ffe0ad;
+}
+
+.btnhome {
+  position: absolute;
+  bottom: 1;
+  margin-left: -70px;
+  background-color: black;
+  border-width: 2px;
+  border: solid;
+  border-color: #ffe0ad;
+  color: #ffe0ad;
+  padding: 6px 10px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  border-radius: 25px;
+}
+.btnhome:hover {
+  background-color: #ffe0ad;
+  border: solid;
+  border-width: 2px;
+  border-color: #ffe0ad;
+  color: black;
+}
+.tooltip {
+  position: absolute !important;
+  display: inline !important;
+  /*border-bottom: 1px dotted white;*/
+}
+
+.tooltip .tooltiptext {
+  visibility: hidden;
+  width: 120px;
+  background-color: black;
+  color: #fff;
+  text-align: center;
+  border-radius: 6px;
+  padding: 5px 0;
+
+  /* Position the tooltip */
+  position: absolute;
+  z-index: 1;
+  }
+.tooltip:hover .tooltiptext {
+  visibility: visible;
+}
+</style>
+
+<form action="response" method="POST">
+{% csrf_token %}
+<body text="#FFFFFF";>
+    <br>
+    <br>
+    <br><p style="text-align: center; font-family: cursive; font-size: 50px;">GNews</p>
+    <h1 style="text-align: center;">Register</h1><br>
+    <hr>
+<center>
+    <label for="user" style="font-size:20px"><b>Username:&nbsp;&nbsp;</b></label>
+    <input type="text" style="margin-left:80px" placeholder="Enter username" name="user" id="user" required><br><br>
+    <label for="first" style="font-size:20px"><b>First Name:&nbsp;&nbsp;</b></label>
+    <input type="text" style="margin-left:72px" placeholder="Enter first name" name="first" id="first" required><br><br>
+    <label for="last" style="font-size:20px"><b>Last Name:&nbsp;&nbsp;</b></label>
+    <input type="text" style="margin-left:72px" placeholder="Enter last name" name="last" id="last" required><br><br>
+    <label for="email" style="font-size:20px"><b>Email:&nbsp;&nbsp;</b></label>
+    <input type="email" style="margin-left:115px" placeholder="Enter email" name="email" id="email" required><br><br>
+    <label for="pass" style="font-size:20px"><b>Password:&nbsp;&nbsp;</b></label>
+    <input type="password" style="margin-left:82px" placeholder="Enter password" name="pass" id="pass" required>
+	<div class="tooltip">&nbsp;&nbsp;<i style="font-size:26px" class="fa">&#xf059;</i>
+       <span class="tooltiptext">Atleast 8 in length<br>Not common</span>
+    </div><br><br>
+    <label for="pass2" style="font-size:20px"><b>Re-Enter Password:&nbsp;&nbsp;</b></label>
+    <input type="password" placeholder="Re-enter password" name="pass2" id="pass2" required><br>
+    <hr>
+    <button style="font-size:20px" type="submit" class="register">Register!</button>
+</center>
+</form>
+  <div class="container return_home">
+    <h3 style="text-align: center;"><a href="/"><button class="btnhome">Return to Home</button></a></h3>
+  </div>
+  </body>
+<div class="bg"></div>
+</html>
